@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body{
+    background-color: hsla(0, 2%, 8%, 0.694);
+}
+
+.string{
+    height: 220px;
+    width: 100dvw;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
