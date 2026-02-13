@@ -1,7 +1,8 @@
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
+const tl = gsap.timeline()
 
-gsap.from("#page #box", {
+tl.from("#page #box", {
     opacity : 0,
     scale : 0.5,
     delay : 1,
@@ -10,7 +11,7 @@ gsap.from("#page #box", {
 
 
 // Page 2 - Box grows and rotates on scroll
-gsap.from("#page2 #box2", {
+tl.from("#page2 #box2", {
    height: "0dvh",
     width : "0dvw",
     opacity : 0,
@@ -27,7 +28,7 @@ gsap.from("#page2 #box2", {
 });
 
 // Page 2 container grows
-gsap.from("#page2", {
+tl.from("#page2", {
     scale: 0.5,
     opacity: 0,
     duration: 1.5,
@@ -41,7 +42,7 @@ gsap.from("#page2", {
 });
 
 
-gsap.to("#page3 h1", {
+tl.to("#page3 h1", {
     transform : "translateX(-270%)",
     duration : 2,
     // delay : 2,
@@ -55,3 +56,18 @@ gsap.to("#page3 h1", {
         pin : true
     }
 })
+
+
+gsap.from("#page4 h2", {
+    y: 20,
+    opacity: 0,
+    duration: 2,
+    scrollTrigger: {
+        trigger: "#page4",
+        scroller: "body",
+        start: "top 40%",
+        end: "top 0%",
+        scrub: 1,
+        // markers: true
+    }
+});

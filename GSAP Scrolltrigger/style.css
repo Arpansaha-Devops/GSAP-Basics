@@ -41,6 +41,13 @@ body{
 }
 
 
+#page5{
+     position: relative;
+    background-color: #f6f6f6c9;
+    height: 100dvh;
+    width: 100dvw; 
+}
+
 #box{
     height: 200px;
     width: 200px;
