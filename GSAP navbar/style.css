@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Momo Trust Display", sans-serif; 
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Main container */
+#main {
+  height: 100dvh;
+  width: 100dvw;
+  background-image: url("https://i.pinimg.com/736x/a2/0a/b9/a20ab99612c5ce8fcf151b24dda23c49.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Navigation bar */
+.nav {
+  height: 4rem;
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav h4 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.nav i {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+/* Side panel */
+#full {
+  height: 90dvh;
+  width: 32%;
+  position: absolute;
+  top: 1rem;
+  right: -32%;
+  padding: 2rem;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+/* Panel heading */
+#full h4 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+
+/* Close icon */
+#full i {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
