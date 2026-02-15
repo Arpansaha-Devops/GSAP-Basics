@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #212121;
+}
+
+/* Pages */
+#page1, 
+#page2, 
+#page3 {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #212121;
+}
+
+/* Center page2 content */
+#page2 {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Scrolling container */
+.main {
+  display: flex;
+  gap: 2vw;
+ 
+}
+
+/* Image box */
+.box {
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+   /* transform: translateX(-100%); */
+}
+
+.box img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
