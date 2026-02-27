@@ -1,28 +1,27 @@
-// Create infinite animation
-const marquee = gsap.to(".main", {
-  xPercent: -50,
-  duration: 25,
-  ease: "none",
-  repeat: -1
+// 1. Clone slides for seamless loop
+const carousel = document.querySelector(".carousel");
+const slides = document.querySelectorAll(".slide");
+
+slides.forEach(slide => carousel.appendChild(slide.cloneNode(true)));
+
+// 2. Measure one full set width
+const gap = 20;
+const setWidth = slides.length * (slides[0].offsetWidth + gap);
+
+// 3. Infinite marquee with GSAP
+const marquee = gsap.to(".carousel", {
+    x: -setWidth,
+    duration: 20,
+    ease: "none",
+    repeat: -1
 });
 
-// Default direction: left → right
-let direction = 1;
-
-// Wheel event
+// 4. Smooth direction change on scroll
 window.addEventListener("wheel", (e) => {
-
-  if (e.deltaY > 0) {
-    // Scroll DOWN → normal direction
-    if (direction !== 1) {
-      direction = 1;
-      marquee.timeScale(1);   // forward
-    }
-  } else {
-    // Scroll UP → reverse direction
-    if (direction !== -1) {
-      direction = -1;
-      marquee.timeScale(-1);  // reverse
-    }
-  }
+    const dir = e.deltaY > 0 ? 1 : -1;
+    gsap.to(marquee, {
+        timeScale: dir,
+        duration: 0.5,
+        overwrite: true
+    });
 });
