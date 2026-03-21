@@ -58,9 +58,9 @@ tl.to("#page3 h1", {
 })
 
 
-gsap.from("#page4 h2", {
+gsap.to("#page4 h2", {
     y: 20,
-    opacity: 0,
+ clipPath: "inset(0 0% 0 0%)",
     duration: 2,
     scrollTrigger: {
         trigger: "#page4",
